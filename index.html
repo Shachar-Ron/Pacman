@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width= device-width, initial-scale= 1">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+			integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+			crossorigin="anonymous">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="Style/index_style.css">
+
+
+		<!-- JavaScripts -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="JavaScript/jquery-3.4.1.slim.min.js"></script>
+		<script src="jquery-validation-1.19.1/lib/jquery-1.11.1.js"></script>
+		<script src="jquery-validation-1.19.1/dist/jquery.validate.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+			integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+			integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+			crossorigin="anonymous"></script>
+
+		<!-- App -->
+		<script type="text/javascript" src="JavaScript/app.js"></script>
+
+		<!-- Our JS -->
+		<script type="text/javascript" src="JavaScript/welcome.js"></script>
+
+
+		<!-- Title -->
+		<title>Pacman World</title>
+
+		<!-- Header -->
+		<div id="header">
+			<div id="header-left"><img src="Photos/header.jpg" height="85" width="320"></div>
+			<div id="header-right"> <legend style="font-size:20px"><u><b>By: Roman
+							Grigorenko <br> Shachar Ron</b></u></legend></div>
+			<div id="header-center"> <p>
+					<span style="color: blue; font-size: 60px">P</span>
+					<span style="color: red; font-size: 60px">a</span>
+					<span style="color: yellow; font-size: 60px">c</span>
+					<span style="color: turquoise; font-size: 60px">m</span>
+					<span style="color: green; font-size: 60px">a</span>
+					<span style="color: orange; font-size: 60px">n</span>
+				</p>
+			</div>
+		</div>
+
+	</head>
+
+	<body id="body">
+		<div class="sidenav" id="sidenav" style="margin-top: 85px;">
+			<a class="btn btn-outline-primary btn-lg" role="button" id="welcome_btn"
+				aria-pressed="true" onclick="welcomeShow()" style="color: #33ccff;">Welcome</a>
+			<br>
+			<a class="btn btn-outline-primary btn-lg" role="button" id="registration_btn"
+				aria-pressed="true" onclick="registrationShow()" style="color: #33ccff;">Register</a>
+			<br>
+			<a class="btn btn-outline-primary btn-lg" role="button" id="login_btn"
+				aria-pressed="true" onclick="loginShow()" style="color: #33ccff;">Login</a>
+			<br>
+			<a class="btn btn-outline-primary btn-lg" role="button" id="myBtn"
+				aria-pressed="true" onclick="showModelDialog()" style="color: #33ccff;">About</a>
+		</div>
+
+		<div id="myModal" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content" id="myModal02" style="background-color: yellow;">
+				<span class="close">&times;</span>
+				<p><b>This game was created by Roman Grigorenko and Shachar Ron,<br>
+						This is the second assignment in the course "Internet Programming
+						Environments".<br>
+						<br>
+					</b>
+					In this work we used the jQuery Plugin:<br>
+					1.jquery validation- Registration form for validation and submission.<br><br>
+					In this work we used Template:<br>
+					1.bootstrap.
+					<br><br>
+
+					The difficulties we had during work:<br>
+					1. Enter a project where some of the code is already written with a lot of
+					number which is not explained.<br>
+					2. Our cooperation is remote<br>
+					
+
+				</p>
+				<p id="bottom-right" style="text-align: center;">
+					<img id="bottom-right" src="Photos/about2.jpg" class="img-rounded"
+						height="120" width="320">
+				</p>
+
+			</div>
+		</div>
+
+		<!-- Welcome Page -->
+		<div id="welcome" class="mx-auto text-center">
+			<br>
+			<br>
+			<br>
+			<img src="Photos/pacman-logo-png-7-removebg-preview.png" class="img-rounded"
+				alt="Welcome Logo">
+			<br>
+			<br>
+			<br>
+			<br>
+			<a class="btn btn-outline-primary mr-4 btn-lg" role="button" id="login_btn"
+				aria-pressed="true" onclick="loginShow()" style="color: #33ccff;">Login</a>
+			<a class="btn btn-outline-primary btn-lg" role="button" id="registration_btn"
+				aria-pressed="true" onclick="registrationShow()" style="color: #33ccff;">Register</a>
+			<br>
+			<br>
+			<br>
+		</div>
+
+
+
+		<!-- Registration Page -->
+		<div id="registration_page" class="container">
+			<form class="cmxform" id="signupForm" method="get" style="align-content:
+				center;" action="">
+				<fieldset>
+					<legend><u><b>Sign-Up To Save Pacman</b></u></legend>
+					<br>
+					<p>
+						<label for="firstname"><u>Firstname</u></label>
+						<input id="firstname" class="form-control" name="firstname" type="text">
+					</p>
+					<p>
+						<label for="lastname"><u>Lastname</u></label>
+						<input id="lastname" class="form-control" name="lastname" type="text">
+					</p>
+					<p>
+						<label for="username"><u>Username</u></label>
+						<input id="username" class="form-control" name="username" type="text">
+					</p>
+					<p>
+						<label for="password"><u>Password</u></label>
+						<input id="password" class="form-control" name="password" type="password">
+					</p>
+					<p>
+						<label for="confirm_password"><u>Confirm password</u></label>
+						<input id="confirm_password" class="form-control" name="confirm_password"
+							type="password">
+					</p>
+					<p>
+						<label for="email"><u>Email</u></label>
+						<input id="email" class="form-control" name="email" type="email">
+					</p>
+					<p>
+						<label for="birthday"><u>Day of Birth</u></label>
+						<input type="date" class="form-control" id="birthday" name="birthday"
+							required/>
+					</p>
+					<p>
+						<input class="btn btn-info" type="submit" value="SignUp">
+					</p>
+				</fieldset>
+			</form>
+			<script type="text/javascript" src="JavaScript/login_registration.js"></script>
+		</div>
+
+		<!-- Login Page -->
+		<div id="login_page" class="mx-auto text-center">
+			<br>
+			<br>
+			<br>
+			<form id="loginForm" class="cmxform" method="get" style="align-content:
+				center;" action="">
+				<fieldset>
+					<legend><u><b>Sign-In To Save Pacman!</b></u></legend>
+					<br>
+					<p>
+						<label for="username_l"><u>Username</u></label>
+						<input type="text" class="form-control" name="username_l" id="username_l"
+							/>
+					</p>
+					<p>
+						<label for="password_l"><u>Password</u></label>
+						<input type="password" class="form-control" name="password_l"
+							id="password_l" />
+					</p>
+					<p>
+						<input class="btn btn-info" class="btn btn-info" type="submit" id="login"
+							value="Sign in" />
+					</p>
+				</fieldset>
+			</form>
+			<script src="JavaScript/login.js"></script>
+		</div>
+
+		<!--   Settings    -->
+		<div id="settings_page" class="mx-auto text-center">
+			<h2>Settings</h2>
+			<hr style="width: 20%">
+			<h3>Set game keyboard</h3>
+			<br>
+			<p>
+				<!-- UP -->
+				
+				<button id="settUpKey" style="width: 5%" onclick="setColorUP()"
+					 onkeyup="getUP(event)"><img
+						src="Photos/arrowUp.png" height="40" width="40"></button>
+				<label><b>The value is: </b></label>
+				<label id="up"></label>
+				<br><br>
+				<!-- DOWN -->
+				
+				<button id="settDownKey" style="width: 5%"
+					onclick="setColorDown()"
+					onkeyup="getDown(event)"><img src="Photos/arrowDown.png"
+						height="40" width="40"></button>
+				<label><b>The value is: </b></label>
+				<label id="down"></label>
+				<br><br>
+				<!-- LEFT -->
+				
+				<button id="settLeftKey" style="width: 5%"
+					onclick="setColorLeft()"
+					onkeyup="getLeft(event)"><img src="Photos/arrowLeft.png"
+						height="40" width="40"></button>
+				<label><b>The value is: </b></label>
+				<label id="left"></label>
+				<br><br>
+				<!-- RIGHT -->
+				
+				<button id="settRightKey" style="width: 5%"
+					onclick="setColorRight()"
+					onkeyup="getRight(event)"><img src="Photos/arrowRight.png"
+						height="40" width="40"></button>
+				<label><b>The value is: </b></label>
+				<label id="right"></label>
+				<br><br>
+			</p>
+			<hr style="width: 20%">
+			<table align="center">
+				<tr>
+
+					<td><label><b>Number of balls: </b></label></td>
+					<td><input id="settNumOfBalls" class="inputField" type="number"
+							min="50" max="90"  style="width: 25%"></td>
+				</tr>
+				
+				<tr>
+					<td><label><b>balls of 5 Points:</b></label></td>
+					<td><input id="sett5P" class="inputField" type="color"
+							value="#0000ff"></td>
+				</tr>
+				<tr></tr>
+				
+				<tr>
+					<td><label><b>balls of 15 Points:</b></label></td>
+					<td><input id="sett15P" class="inputField" type="color"
+							value="#ff0000"></td>
+				</tr>
+				<tr></tr>
+				
+				<tr>
+					<td><label><b>balls of 25 Points:</b></label></td>
+					<td><input id="sett25P" class="inputField" type="color"
+							value="#00ff00"></td>
+				</tr>
+
+				<tr>
+					<td><label><b>Time to play (sec): </b></label></td>
+					<td><input id="settTime" class="inputField" type="number"
+							min="60"
+						 style="width: 25%"></td>
+				</tr>
+				<tr>
+
+					<td><label><b>Number of monsters: </b></label></td>
+					<td><input id="settNumOfMonsters" class="inputField" type="number"
+							min="1"
+							max="4"  style="width: 25%"></td>
+				</tr>
+
+
+			</table>
+
+			<!--            random values Settings               -->
+			<div id="random_settings" style="text-align: center">
+				<button onclick="settings_randomValues()" style="width: 10%">Set random
+					values</button>
+				<br>
+			</div>
+
+			<!--           save settings               -->
+			<br>
+			<div id="save_settings">
+				<button onclick="moveToGame()" style="width: 10%">Save changes</button>
+			</div>
+			<br>
+		</div>
+
+		<audio id="endGameWin" src="Photos/Queen_We_Are_The_Champions.mp3"
+			preload="auto"></audio>
+		<audio id="endGameLoss" src="Photos/loser.mp3" preload="auto"></audio>
+
+		<div id="game">
+			<audio loop id="musicForGame">
+				<source src="Photos/Pac-manMusic.mp3" type="audio/mp3">
+				Your browser does not support the audio tag.
+			</audio>
+
+			<table cellspacing="0" width="160%" Length="160%">
+				<tr>
+					<td width="75%">
+						<label for="lblScore" style="color:#33ccff;"><b>SCORE:</b></label>
+						<input id="lblScore" type="text" style="width: 5%; background-color:
+							black; color: yellow;" />
+
+						<label for="lblTime" style="color:#33ccff;">TIME:</label>
+						<input id="lblTime" type="text" style="width: 10%; background-color:
+							black; color: yellow;" />
+
+						<label for="lblLives" style="color:#33ccff;"><b>LIVES:</b></label>
+						<input id="lblLives" type="text" style="width: 5%; background-color:
+							black; color: yellow;" />
+
+						<label for="lblName" style="color:#33ccff;"><b>PLAYER:</b></label>
+						<input id="lblName" type="text" style="width: 10%; background-color:
+							black; color: yellow;" />
+
+
+					</td>
+
+					<td width="25%">
+						<button align="left" id="new_game" onclick="moveToGameAgain()"
+							style="color: blue; background-color: yellow;"><b>New Game</b></button>
+					</td>
+
+				</tr>
+				<tr>
+					<td bordercolor="yellow"><canvas id="canvas" height="600px" width="600px"></canvas></td>
+					<td>
+						<h2 style="color: yellow;">Setting:</h2>
+						<p style="color:#33ccff;">
+							<b>
+
+								<img src="Photos/arrowUp.png" height="40" width="40">
+								<label for="lbArrowUp"></label>
+								<input style="background-color: black; color: yellow; width: 40%"
+									id="lbArrowUp" type="text" /><br>
+
+								<img src="Photos/arrowDown.png" height="40" width="40">
+								<label for="lbArrowDown"></label>
+								<input style="background-color: black; color: yellow; width: 40%"
+									id="lbArrowDown" type="text" /><br>
+
+								<img src="Photos/arrowRight.png" height="40" width="40">
+								<label for="lbArrowRight"></label>
+								<input style="background-color: black; color: yellow; width: 40%"
+									id="lbArrowRight" type="text" /><br>
+
+								<img src="Photos/arrowLeft.png" height="40" width="40">
+								<label for="lbArrowLeft"></label>
+								<input style="background-color: black; color: yellow; width: 40%"
+									id="lbArrowLeft" type="text" /><br>
+
+
+								<label for="lbTime">Time per game:</label>
+								<input style="background-color: black; color: yellow; width: 20%"
+									id="lbTime" type="text" /><br>
+
+								<label for="lbFood">Num of food:</label>
+								<input style="background-color: black; color: yellow; width: 15%"
+									id="lbFood" type="text" /><br>
+
+								<label for="lbMonsters">Num of monsters:</label>
+								<input style="background-color: black; color: yellow; width: 15%"
+									id="lbMonsters" type="text" /><br>
+
+								<label for="lb5">5 points balls:</label>
+								<input id="lb5" class="inputField" type="color" value="#ff0000"><br>
+								<label for="lb15">15 points balls:</label>
+								<input id="lb15" class="inputField" type="color" value="#ff0000"><br>
+								<label for="lb25">25 points balls:</label>
+								<input id="lb25" class="inputField" type="color" value="#ff0000"><br>
+							</b>
+						</p>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"></script>
+	</body>
+
+	<footer class="page-footer font-small blue fixed-bottom text-center">
+		Here we try to save ower pacman!,
+		The Game was build by using HTML5.
+
+		Contact information: <a href="mailto:grigorer@post.bgu.ac.il">
+			grigorer@post.bgu.ac.il</a> ||
+		<a href="mailto:shachab@post.bgu.ac.il">
+			shachab@post.bgu.ac.il</a>.
+	</footer>
+
+
+</html>

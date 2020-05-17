@@ -1,0 +1,286 @@
+
+/* Whole page Style */
+html
+{
+    background-color: black;
+
+}
+head
+{
+    background-color: black ;
+}
+
+
+body {
+    background-color: black !important;
+    margin-bottom:70px;
+}
+
+div
+{
+    background-color: black;
+    display: none;
+}
+
+/* Header */
+#header {
+    display: inline-table;
+    width:100%;
+    text-align:center;
+}
+
+#header-left {
+    display: block;
+    float:left;
+    width:240px;
+}
+
+#header-center {
+    display: inline-block;
+    margin:0 auto;
+    width:300px;
+}
+
+#header-right {
+    display: block;
+    float:right;
+    width:250px;
+}
+#header legend
+{
+    color: #b8ecfd;
+    text-align: center;
+}
+
+/* Menu */
+#sidenav{
+    display: block;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+
+  .sidenav button
+  {
+    padding: 6px 8px 6px 16px;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+/* Welcome Style */
+#welcome
+{
+    display: block;
+}
+
+/* Registration Style */
+#registration_page p
+{
+    color:#33ccff;
+}
+#registration_page h4
+{
+    color:#b8ecfd;
+}
+
+#registration_page legend
+{
+    color: #b8ecfd;
+    text-align: center;
+}
+
+#registration_page form
+{
+    text-align: center;
+}
+
+#registration_page
+{
+    width: 20%;
+}
+
+/* login Style */
+#login_page p
+{
+    color:#33ccff;
+}
+#login_page h4
+{
+    color:#b8ecfd;
+}
+
+#login_page legend
+{
+    color: #b8ecfd;
+    text-align: center;
+}
+
+#login_page form
+{
+    text-align: center;
+}
+
+#login_page
+{
+    width: 20%;
+}
+
+/* error massages Style */
+.error {
+    color: red;
+
+ }
+
+ /* settings Style */
+ #settings_page p
+ {
+    color:#33ccff;
+ }
+
+ /* Footer */
+ footer
+ {
+    color:#33ccff;
+    background-color: black;
+    width: 100%;
+
+ }
+footer a
+{
+    background-color: black;
+}
+
+
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+ /* settings Style */
+ #settings_page p
+ {
+    color:#33ccff;
+    
+ }
+ #settings_page label
+ {
+    color:#33ccff;
+ }
+ #settings_page h2
+ {
+    color:#f1ff33;
+ }
+ #settings_page h3
+ {
+    color:#f1ff33;
+ }
+ #settings_page span
+ {
+    color:white;
+ }
+
+#settings_page button
+{
+   background-color:#f1ff33;
+   color:black;
+}
+#settings_page hr
+{
+    width: "20%";
+   background-color:#daff33;
+}
+
+#score
+{
+    padding-left: 170px;
+}
+#time
+{
+    padding-left: 170px;
+}
+#game
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+
+canvas
+{
+    width: 90%;
+    height: 90%;
+    border-style: solid;
+	border-color: blue;
+}

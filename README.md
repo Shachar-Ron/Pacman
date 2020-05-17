@@ -3,7 +3,7 @@ Pac-Man game written in HTML5 + CSS3 + jQuery with Canvas.
 
 Our Pacman game:
 
-https://sise-web-development-environments.github.io/assignment2-roman-ron-assigment2/
+https://shachar-ron.github.io/Pacman/
 
 
 Added functionality to the game:
